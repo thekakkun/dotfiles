@@ -1,5 +1,6 @@
 directory: ~/Music
 library: ~/Music/library.db
+original_date: yes
 per_disc_numbering: yes
 
 import:
@@ -10,7 +11,7 @@ paths:
     singleton: $artist/$album%aunique{}/$disc-$track $title
     comp: Compilations/$album%aunique{}/$disc-$track $title
 
-plugins: fetchart mpdupdate replaygain info mbsync
+plugins: fetchart mpdupdate replaygain info mbsync 
 replaygain:
     backend: ffmpeg
     overwrite: yes
