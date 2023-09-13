@@ -10,7 +10,8 @@ paths:
     singleton: $artist/$album%aunique{}/$disc-$track $title
     comp: Compilations/$album%aunique{}/$disc-$track $title
 
-plugins: fetchart mpdupdate scrub replaygain info mbsync playback_tracker
+plugins: fetchart mpdupdate scrub replaygain info mbsync mpd_tracker
 replaygain:
     backend: ffmpeg
     overwrite: yes
+
