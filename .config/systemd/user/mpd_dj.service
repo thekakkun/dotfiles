@@ -1,10 +1,10 @@
 [Unit]
-Description=MPD playback tracker plugin for Beets
+Description=MPD DJ plugin for Beets
 Requires=mpd.service
 After=mpd.service
 
 [Service]
-ExecStart=%h/.local/bin/beet tracker
+ExecStart=%h/.local/bin/beet dj -n 8 -a
 
 [Install]
 WantedBy=default.target
