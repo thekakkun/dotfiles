@@ -368,7 +368,7 @@ font:
 
   # Duration of the visual bell flash in milliseconds. A `duration` of `0` will
   # disable the visual bell animation.
-  #duration: 0
+  #duration: 500
 
   # Visual bell animation color.
   #color: '#ffffff'
