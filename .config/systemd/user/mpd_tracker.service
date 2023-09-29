@@ -7,5 +7,4 @@ After=mpd.service
 ExecStart=%h/.local/bin/beet tracker
 
 [Install]
-WantedBy=default.target
-
+WantedBy=mpd.service

@@ -2,6 +2,7 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+setopt autocd
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -25,9 +26,16 @@ alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ls='ls -hF --color=auto'
 alias ll='ls -l'
-alias la='ls -A'
+alias la='ls -lA'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -I'
 alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+function precmd {
+	print -Pn "\e]0;$TERM %~\e\\"
+}
+
+function preexec {
+	print -Pn "\e]0;${(q)1}\e\\"
+}
