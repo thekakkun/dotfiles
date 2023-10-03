@@ -33,9 +33,10 @@ alias rm='rm -I'
 alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 function precmd {
-	print -Pn "\e]0;$TERM %~\e\\"
+	print -Pn "\e]0;$TERM: %~\e\\"
 }
 
 function preexec {
-	print -Pn "\e]0;${(q)1}\e\\"
+	print -n "\e]0;$TERM: ${(q)1}\e\\"
 }
+eval "$(/usr/bin/rtx activate zsh)"
