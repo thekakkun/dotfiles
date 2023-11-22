@@ -10,8 +10,21 @@ paths:
     singleton: $artist/$album%aunique{}/$disc-$track $title
     comp: Compilations/$album%aunique{}/$disc-$track $title
 
-plugins: fetchart mpdupdate scrub replaygain info mbsync mpd_tracker mpd_dj
+plugins: fetchart mpdupdate scrub replaygain info mbsync smartplaylist mpd_tracker mpd_dj
+fetchart:
+  sources:
+    - filesystem
+    - coverart
 replaygain:
     backend: ffmpeg
     overwrite: yes
+smartplaylist:
+    relative_to: ~/music
+    playlist_dir: ~/.config/mpd/playlists
+    playlists:
+      - name: "The Backlog.m3u"
+        query: play_count:0
+
+      - name: "New Additions.m3u"
+        query: "^play_count:0 added:-6m.. added-"
 

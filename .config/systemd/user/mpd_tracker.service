@@ -3,7 +3,13 @@ Description=MPD playback tracker plugin for Beets
 Requires=mpd.service
 After=mpd.service
 
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
 [Service]
+Restart=on-failure
+RestartSec=5s
+
 ExecStart=%h/.local/bin/beet tracker
 
 [Install]
