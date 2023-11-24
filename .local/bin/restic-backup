@@ -11,6 +11,6 @@ set -e
 set -v
 
 restic backup ~/ --exclude-file ~/.config/restic/excludes --tag scheduled --no-scan
-totoro-mounted && restic backup ~/pictures/photos --tag scheduled --no-scan
+systemctl is-active --quiet media-totoro.mount && restic backup ~/pictures/photos --tag scheduled --no-scan
 restic forget --prune --keep-hourly 24 --keep-daily 7 --keep-weekly 4 --keep-monthly 12 --keep-yearly 1
 restic check
