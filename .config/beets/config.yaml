@@ -15,6 +15,7 @@ fetchart:
   sources:
     - filesystem
     - coverart
+    - itunes
 replaygain:
     backend: ffmpeg
     overwrite: yes
@@ -27,4 +28,3 @@ smartplaylist:
 
       - name: "New Additions.m3u"
         query: "^play_count:0 added:-6m.. added-"
-

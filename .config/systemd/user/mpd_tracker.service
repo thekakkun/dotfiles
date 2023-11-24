@@ -10,7 +10,7 @@ StartLimitBurst=5
 Restart=on-failure
 RestartSec=5s
 
-ExecStart=~/.local/bin/beet tracker
+ExecStart=%h/.local/bin/beet tracker
 
 [Install]
 WantedBy=mpd.service
