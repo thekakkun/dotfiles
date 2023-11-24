@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+if [[ -n $(pgrep 'restic' | grep 'restic backup') ]]; then
+    echo 'restic is already running...' 1>&2
+    exit 0
+fi
+
+source ~/.config/restic/.env
+
+set -e
+set -v
+
+restic backup ~/ --exclude-file ~/.config/restic/excludes --tag scheduled --no-scan
+totoro-mounted && restic backup ~/pictures/photos --tag scheduled --no-scan
+restic forget --prune --keep-hourly 24 --keep-daily 7 --keep-weekly 4 --keep-monthly 12 --keep-yearly 1
+restic check

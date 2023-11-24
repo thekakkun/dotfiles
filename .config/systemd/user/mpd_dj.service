@@ -10,7 +10,7 @@ StartLimitBurst=5
 Restart=on-failure
 RestartSec=5s
 
-ExecStart=%h/.local/bin/beet dj -n 8 -a last_played:..-1y, added:-6m..
+ExecStart=~/.local/bin/beet dj -n 8 -a last_played:..-1y, added:-6m..
 
 [Install]
 WantedBy=mpd.service

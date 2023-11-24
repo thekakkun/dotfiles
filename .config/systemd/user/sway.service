@@ -1,0 +1,11 @@
+[Unit]
+Description=Sway
+BindsTo=graphical-session.target
+Wants=graphical-session-pre.target
+After=graphical-session-pre.target
+
+[Service]
+ExecStart=/usr/bin/sway
+
+[Install]
+WantedBy=default.target
