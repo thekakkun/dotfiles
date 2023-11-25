@@ -24,7 +24,7 @@ smartplaylist:
     playlist_dir: ~/.config/mpd/playlists
     playlists:
       - name: "The Backlog.m3u"
-        query: play_count:0
+        query: ^play_count:1..
 
       - name: "New Additions.m3u"
-        query: "^play_count:0 added:-6m.. added-"
+        query: "play_count:1.. added:-6m.. added-"
