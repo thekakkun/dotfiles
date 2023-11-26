@@ -1,9 +1,10 @@
 [Unit]
 Description=Start qBittorrent on graphical session
-BindsTo=graphical-session.target home-hiroto-download.mount
+PartOf=graphical-session.target home-hiroto-download.mount
 After=graphical-session.target home-hiroto-download.mount
 
 [Service]
+ExecStartPre=/usr/bin/sleep 2
 ExecStart=/usr/bin/qbittorrent
 ExecStop=/usr/bin/pkill -f /usr/bin/qbittorrent
 

@@ -2,4 +2,4 @@
 Description=Backup system
 
 [Service]
-ExecStart=systemd-inhibit --what="sleep:shutdown" --mode="delay" %h/.local/bin/restic-backup
+ExecStart=systemd-inhibit --what="sleep:shutdown" --why="Restic backup in progress" %h/.local/bin/restic-backup

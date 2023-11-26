@@ -1,0 +1,9 @@
+$HOME/*/**/*.pyc
+$HOME/*/**/__pycache__/**
+$HOME/*/**/node_modules/**
+$HOME/.cache/**
+$HOME/.local/lib/python*/site-packages/**
+$HOME/.local/share/Steam/steamapps/**
+$HOME/.mozilla/firefox/*/Cache/**
+$HOME/pictures/photos/**
+$HOME/download/**
