@@ -8,7 +8,7 @@ import:
 paths:
     default: $albumartist/$album%aunique{}/$disc-$track $title
     singleton: $artist/$album%aunique{}/$disc-$track $title
-    comp: Compilations/$album%aunique{}/$disc-$track $title
+    comp: $albumartist/$album%aunique{}/$disc-$track $title
 
 plugins: fetchart mpdupdate scrub replaygain info mbsync smartplaylist mpd_tracker mpd_dj
 fetchart:
@@ -18,7 +18,6 @@ fetchart:
     - itunes
 replaygain:
     backend: ffmpeg
-    overwrite: yes
 smartplaylist:
     relative_to: ~/music
     playlist_dir: ~/.config/mpd/playlists
