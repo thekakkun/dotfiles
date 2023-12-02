@@ -1,0 +1,58 @@
+{
+	"layer": "top",
+	"position": "top",
+	"spacing": 4,
+	"modules-center": ["clock"],
+	"modules-right": ["pulseaudio", "network", "cpu", "memory", "backlight", "battery", "tray"],
+
+	"sway/workspaces": {
+		"format": "{name}",
+		"disable-scroll": true,
+		"numeric-first": false,
+	},
+	"clock": {
+		"on-click": "firefox https://calendar.google.com",
+		"format": "{:%I:%M %p | %a. %B %d, %Y}"
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume}% | {format_source}",
+		"format-bluetooth": " {volume}% | {format_source}",
+		"format-bluetooth-muted": " | {format_source}",
+		"format-muted": " | {format_source}",
+		"format-source": "",
+		"format-source-muted": "",
+		"format-icons": {
+			"headphone": "",
+			"headset": "",
+			"default": ["", "", ""]
+		}
+	},
+	"network": {
+		"on-click": "foot nmtui",
+		"format-wifi": "{icon} {essid}",
+		"format-icons": [""],
+		"format-ethernet": " {ipaddr}",
+		"format-disconnected": "⚠ disconnected",
+	},
+	"cpu": {
+		"on-click": "foot btm",
+		"format": " {usage}%",
+		"tooltip": false
+	},
+	"memory": {
+		"on-click": "foot btm",
+		"format": " {percentage}%",
+	},
+	"backlight": {
+		"format": " {percent}%"
+	},
+	"battery": {
+		"format": "{icon} {time} ({capacity}%)",
+		"format-charging": " {time} ({capacity}%)",
+		"format-plugged": " {capacity}%",
+		"format-icons": ["", "", "", "", ""]
+	},
+	"tray": {
+		"spacing": 10
+	}
+}

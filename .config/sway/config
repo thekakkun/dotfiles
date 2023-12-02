@@ -75,8 +75,7 @@
 
 ### Media
 	
-	bindsym $mod+m exec "swaymsg [app_id='^music$'] focus || \
-		(swaymsg workspace music; foot --app-id music ncmpcpp)"
+	bindsym $mod+m exec ~/.config/sway/music-workspace.sh
 
 	workspace music output $laptop_display $lg_monitor
 	assign [app_id="^music$"] workspace music
