@@ -11,8 +11,6 @@ window#waybar {
 }
 
 #workspaces {
-	margin-top: 4px;
-	margin-left: 4px;
 }
 
 #workspaces button {
@@ -46,12 +44,10 @@ window#waybar {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-	margin-top: 4px;
     padding: 5px 10px;
     color: #ffffff;
 	background: rgba(28, 54, 21, 0.725);
 } 
 
 #tray {
-	margin-right: 4px;
 }

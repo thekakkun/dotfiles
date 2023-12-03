@@ -60,7 +60,7 @@
 	client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
 	client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
-	gaps inner 10
+	gaps inner 4
 
 
 ### Workspaces
@@ -72,6 +72,7 @@
 
 ### Containers
 
+	for_window [app_id="^mpv$"] floating enable
 
 ### Media
 	
