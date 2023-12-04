@@ -20,12 +20,17 @@ window#waybar {
 	background: rgba(36, 33, 32, 0.4);
 }
 
+#workspaces button:last-child {
+	margin-right: 0;
+}
+
 #workspaces button.focused {
 	background: rgba(28, 54, 21, 0.725);
 }
 
 #workspaces button:hover {
-	box-shadow: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
 }
 
 #clock,
@@ -49,5 +54,7 @@ window#waybar {
 	background: rgba(28, 54, 21, 0.725);
 } 
 
-#tray {
+#clock {
+	margin-left: 5px;
+	margin-right: 5px;
 }
