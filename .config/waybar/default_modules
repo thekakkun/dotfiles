@@ -18,42 +18,44 @@
 		"format": "{:%I:%M %p | %a. %B %d, %Y}"
 	},
 	"pulseaudio": {
+		"on-click": "/usr/bin/pavucontrol",
 		"format": "{icon} {volume}% | {format_source}",
-		"format-bluetooth": " {volume}% | {format_source}",
-		"format-bluetooth-muted": " | {format_source}",
-		"format-muted": " | {format_source}",
-		"format-source": "",
-		"format-source-muted": "",
+		"format-bluetooth": "󰂯 {volume}% | {format_source}",
+		"format-bluetooth-muted": "󰂯󰝟 | {format_source}",
+		"format-muted": "󰝟 | {format_source}",
+		"format-source": "󰍬",
+		"format-source-muted": "󰍭",
 		"format-icons": {
-			"headphone": "",
-			"headset": "",
-			"default": ["", "", ""]
+			"headphone": "󰋋",
+			"headset": "󰋎",
+			"default": ["󰕿", "󰖀", "󰕾"]
 		}
 	},
 	"network": {
 		"on-click": "foot nmtui",
 		"format-wifi": "{icon} {essid}",
-		"format-icons": [""],
-		"format-ethernet": " {ipaddr}",
-		"format-disconnected": " disconnected",
+		"format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+		"format-ethernet": "󰈀 {ipaddr}",
+		"format-disconnected": "󰤭 disconnected",
+		"tooltip-format-wifi": "{ipaddr} ({signalStrength}%)"
 	},
 	"cpu": {
 		"on-click": "foot btm",
-		"format": " {usage}%",
+		"format": "󰘚 {usage}%",
 		"tooltip": false
 	},
 	"memory": {
 		"on-click": "foot btm",
-		"format": " {percentage}%",
+		"format": "󰍛 {percentage}%",
 	},
 	"backlight": {
-		"format": " {percent}%"
+		"format": "󰃞 {percent}%"
 	},
 	"battery": {
 		"format": "{icon} {time} ({capacity}%)",
-		"format-charging": " {time} ({capacity}%)",
-		"format-plugged": " {capacity}%",
-		"format-icons": ["", "", "", "", ""]
+		"format-charging": "󰂄 {time} ({capacity}%)",
+		"format-plugged": "󰚥 {capacity}%",
+		"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
 	},
 	"tray": {
 		"spacing": 10
