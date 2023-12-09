@@ -8,6 +8,7 @@ export MOZ_ENABLE_WAYLAND=1
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
+export QT_QPA_PLATFORM=wayland
 
 # added by rust
 . "$HOME/.cargo/env"

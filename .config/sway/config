@@ -8,7 +8,7 @@
 	set $right l
 
 	set $term foot 
-	set $menu wofi --show drun | xargs swaymsg exec --
+	set $menu fuzzel | xargs swaymsg exec --
 
 
 ### Autostart
@@ -41,6 +41,7 @@
 	}
 	output $lg_monitor {
 		adaptive_sync on
+		subpixel rgb
 	}
 
 	focus output "LG Electronics 27GL850 009NTWGMC041"
@@ -75,7 +76,9 @@
 	for_window [app_id="^firefox$" title="^Picture-in-Picture$"] floating enable
 	for_window [app_id="^firefox$" title="Firefox — Sharing Indicator"] floating enable
 	for_window [app_id="^mpv$"] floating enable
+	for_window [class="^skype$"] inhibit_idle visible
 	for_window [app_id="^thunar$"] floating enable
+	
 
 ### Media
 	
@@ -92,6 +95,11 @@
 	bindsym --locked Pause exec playerctl play-pause
 	bindsym XF86AudioNext exec playerctl next
 	bindsym XF86AudioPrev exec playerctl previous
+
+### Screencapture
+
+	bindsym Print exec ~/.config/sway/grimshot.sh save output - | ksnip -e -
+	bindsym Alt+Print exec ~/.config/sway/grimshot.sh save active - | ksnip -e -
 
 ### Key bindings
 

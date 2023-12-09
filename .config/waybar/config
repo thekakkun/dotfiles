@@ -10,6 +10,7 @@
 	"mpd": {
 		"on-click": "~/.config/sway/music-workspace.sh",
 		"format": "{stateIcon} {artist} - {title} | {album} ({date})",
+		"format-stopped": "󰓛 stopped",
 		"state-icons": {
 			"paused": "󰏤",
  			"playing": "󰐊"
