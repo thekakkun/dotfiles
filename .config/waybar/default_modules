@@ -15,7 +15,7 @@
 	},
 	"clock": {
 		"on-click": "firefox https://calendar.google.com",
-		"format": "{:%I:%M %p | %a. %B %d, %Y}"
+		"format": "{:<span weight=\"bold\">%I:%M %p</span> | %a. %B %d, %Y}"
 	},
 	"pulseaudio": {
 		"on-click": "/usr/bin/pavucontrol",

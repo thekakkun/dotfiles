@@ -133,8 +133,6 @@ mpd_music_dir = ~/Music
 #
 ## Left-most frequency of visualizer in Hz, must be less than HZ MAX
 #
-#visualizer_spectrum_hz_min = 20
-#
 ## Right-most frequency of visualizer in Hz, must be greater than HZ MIN
 #
 #visualizer_spectrum_hz_max = 20000
@@ -311,7 +309,7 @@ mpd_music_dir = ~/Music
 ##   available.
 ##
 #
-#song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
+song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
 #
 ##### various settings #####
 #
