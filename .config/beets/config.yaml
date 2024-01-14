@@ -20,11 +20,12 @@ fetchart:
 replaygain:
     backend: ffmpeg
 smartplaylist:
+    auto: yes
     relative_to: ~/music
     playlist_dir: ~/.config/mpd/playlists
     playlists:
       - name: "The Backlog.m3u"
-        query: ^play_count:1..
+        query: "^play_count:1.. added+"
 
       - name: "New Additions.m3u"
         query: "play_count:1.. added:-6m.. added-"

@@ -17,7 +17,6 @@
 	exec_always systemctl --user start sway-session.target
 	exec swayidle -w
 	exec waybar
-	exec dbus-update-activation-environment DISPLAY XAUTHORITY WAYLAND_DISPLAY
 	exec gnome-keyring-daemon --start --components=secrets
 
 
@@ -33,18 +32,14 @@
 ### Output
 
 	set $laptop_display	"BOE 0x0BCA Unknown"
-	set $lg_monitor		"LG Electronics 27GL850 009NTWGMC041"
+	set $lg_monitor	"LG Electronics 27GL850 009NTWGMC041"
 
 	output * bg ~/pictures/wallpaper.jpg fill
 	output $laptop_display {
-		scale 1.5
-	}
-	output $lg_monitor {
-		adaptive_sync on
-		subpixel rgb
+		scale 1.504
 	}
 
-	focus output "LG Electronics 27GL850 009NTWGMC041"
+	focus output $lg_monitor
 
 
 ### Look and feel
@@ -73,12 +68,14 @@
 
 ### Containers
 
-	for_window [app_id="^firefox$" title="^Picture-in-Picture$"] floating enable
-	for_window [app_id="^firefox$" title="Firefox — Sharing Indicator"] floating enable
-	for_window [app_id="^mpv$"] floating enable
-	for_window [class="^skype$"] inhibit_idle visible
-	for_window [app_id="^thunar$"] floating enable
-	
+	for_window {
+		[app_id="^firefox$" title="^Picture-in-Picture$"] floating enable
+		[app_id="^firefox$" title="Firefox — Sharing Indicator"] floating enable
+		[app_id="^mpv$"] floating enable
+		[app_id="^thunar$"] floating enable
+
+		[class="^Skype$"] inhibit_idle visible
+	}
 
 ### Media
 	
@@ -98,8 +95,8 @@
 
 ### Screencapture
 
-	bindsym Print exec ~/.config/sway/grimshot.sh save output - | ksnip -e -
-	bindsym Alt+Print exec ~/.config/sway/grimshot.sh save active - | ksnip -e -
+	bindsym Print exec /usr/share/sway/scripts/grimshot save output "$HOME/$(date -Iseconds).png"
+	bindsym Alt+Print exec /usr/share/sway/scripts/grimshot save active "$HOME/$(date -Iseconds).png"
 
 ### Key bindings
 

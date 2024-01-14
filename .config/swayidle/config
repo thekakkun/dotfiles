@@ -1,3 +1,5 @@
-timeout 300 'swaylock --daemonize --image=~/pictures/wallpaper.jgp'
-timeout 305 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
-before-sleep 'swaylock --daemonize --image=~/pictures/wallpaper.jpg'
+timeout 300 'swaylock --daemonize --image=~/pictures/wallpaper_blurred.jpg'
+timeout 360 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
+timeout 60 'pgrep -xu "$USER" swaylock > /dev/null && swaymsg "output * power off"' resume 'pgrep -xu "$USER" swaylock > /dev/null && swaymsg "output * power on"'
+before-sleep 'swaylock --daemonize --image=~/pictures/wallpaper_blurred.jpg'
+lock 'swaylock --daemonize'
