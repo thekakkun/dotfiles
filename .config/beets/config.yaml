@@ -11,7 +11,7 @@ paths:
     singleton: $artist/$album%aunique{}/$disc-$track $title
     comp: $albumartist/$album%aunique{}/$disc-$track $title
 
-plugins: fetchart mpdupdate scrub replaygain info mbsync smartplaylist mpd_tracker mpd_dj
+plugins: fetchart scrub replaygain info mbsync smartplaylist mpd_tracker mpd_dj mpdupdate
 fetchart:
   sources:
     - filesystem
