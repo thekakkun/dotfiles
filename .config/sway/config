@@ -7,7 +7,7 @@
 	set $up k
 	set $right l
 
-	set $term foot 
+	set $term alacritty
 	set $menu fuzzel | xargs swaymsg exec --
 
 
@@ -40,6 +40,7 @@
 	}
 
 	focus output $lg_monitor
+	exec xrandr --output DP-11 --primary
 
 
 ### Look and feel

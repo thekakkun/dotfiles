@@ -1,0 +1,6 @@
+import = [
+	"~/.config/alacritty/gruvbox_dark.toml"
+]
+
+[font]
+size = 10.5
