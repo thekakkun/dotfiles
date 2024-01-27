@@ -18,6 +18,7 @@
 	exec swayidle -w
 	exec waybar
 	exec gnome-keyring-daemon --start --components=secrets
+	exec xrandr --output DP-11 --primary
 
 
 ### Input
@@ -40,7 +41,6 @@
 	}
 
 	focus output $lg_monitor
-	exec xrandr --output DP-11 --primary
 
 
 ### Look and feel
