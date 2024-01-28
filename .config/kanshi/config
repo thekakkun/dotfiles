@@ -1,0 +1,15 @@
+profile {
+	output eDP-1 enable
+
+	exec swaymsg output eDP-1 scale 1.504
+}
+
+profile {
+	output eDP-1 enable
+	output "LG Electronics 27GL850 009NTWGMC041" position 1350,0 
+
+	exec swaymsg output eDP-1 scale 1.671111
+	exec swaymsg focus output DP-11
+	exec xrandr --output DP-11 --primary
+}
+

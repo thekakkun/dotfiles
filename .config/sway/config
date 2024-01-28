@@ -14,11 +14,12 @@
 ### Autostart
 
 	include /etc/sway/config.d/*
+	include /etc/kanshi/config.d/*
+	exec kanshi
 	exec_always systemctl --user start sway-session.target
 	exec swayidle -w
 	exec waybar
 	exec gnome-keyring-daemon --start --components=secrets
-	exec xrandr --output DP-11 --primary
 
 
 ### Input
@@ -32,16 +33,7 @@
 
 ### Output
 
-	set $laptop_display	"BOE 0x0BCA Unknown"
-	set $lg_monitor	"LG Electronics 27GL850 009NTWGMC041"
-
 	output * bg ~/pictures/wallpaper.jpg fill
-	output $laptop_display {
-		scale 1.504
-	}
-
-	focus output $lg_monitor
-
 
 ### Look and feel
 
@@ -63,9 +55,9 @@
 ### Workspaces
 
 	workspace_layout stacking
-	
-	workspace 1 output $lg_monitor $laptop_display
-	workspace 2 output $laptop_display $lg_monitor
+	workspace 1 output DP-11 eDP-1
+	workspace 2 output eDP-1 DP-11
+
 
 ### Containers
 
