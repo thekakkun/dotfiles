@@ -74,7 +74,6 @@
 	
 	bindsym $mod+m exec ~/.config/sway/music-workspace.sh
 
-	workspace music output $laptop_display $lg_monitor
 	assign [app_id="^music$"] workspace music
 
 	bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1
@@ -94,7 +93,6 @@
 ### Key bindings
 
 	bindsym $mod+i exec firefox
-	bindsym $mod+n exec obsidian
 
 	bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 	bindsym XF86MonBrightnessUp exec brightnessctl set 5%+

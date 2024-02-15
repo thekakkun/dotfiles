@@ -7,6 +7,7 @@ profile {
 	output "LG Electronics 27GL850 009NTWGMC041" position 1350,0 
 
 	exec swaymsg focus output DP-11
+	exec swaymsg workspace music output eDP-1
 	exec xrandr --output DP-11 --primary
 }
 
