@@ -51,7 +51,7 @@
 	client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
 	client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
-	gaps inner 5
+	gaps inner 4
 
 
 ### Workspaces
@@ -66,6 +66,7 @@
 	for_window {
 		[app_id="^firefox$" title="^Picture-in-Picture$"] floating enable
 		[app_id="^firefox$" title="Firefox — Sharing Indicator"] floating enable
+		[app_id="^firefox$"] inhibit_idle fullscreen
 		[app_id="^mpv$"] floating enable
 		[app_id="^thunar$"] floating enable
 
@@ -220,16 +221,16 @@
 	    # right will grow the containers width
 	    # up will shrink the containers height
 	    # down will grow the containers height
-	    bindsym $left resize shrink width 10px
-	    bindsym $down resize grow height 10px
-	    bindsym $up resize shrink height 10px
-	    bindsym $right resize grow width 10px
+	    bindsym $left resize shrink width 50px
+	    bindsym $down resize grow height 50px
+	    bindsym $up resize shrink height 50px
+	    bindsym $right resize grow width 50px
 	
 	    # Ditto, with arrow keys
-	    bindsym Left resize shrink width 10px
-	    bindsym Down resize grow height 10px
-	    bindsym Up resize shrink height 10px
-	    bindsym Right resize grow width 10px
+	    bindsym Left resize shrink width 50px
+	    bindsym Down resize grow height 50px
+	    bindsym Up resize shrink height 50px
+	    bindsym Right resize grow width 50px
 	
 	    # Return to default mode
 	    bindsym Return mode "default"

@@ -1,10 +1,10 @@
 {
 	"layer": "top",
 	"position": "top",
-	"margin-top": 5,
-	"margin-left": 5,
-	"margin-right": 5,
-	"spacing": 5,
+	"margin-top": 4,
+	"margin-left": 4,
+	"margin-right": 4,
+	"spacing": 4,
 	"modules-center": ["clock"],
 	"modules-right": ["pulseaudio", "network", "cpu", "memory", "backlight", "battery", "tray"],
 
@@ -14,8 +14,8 @@
 		"numeric-first": false,
 	},
 	"clock": {
-		"on-click": "firefox https://calendar.google.com",
-		"format": "{:<span weight=\"bold\">%I:%M %p</span> | %a., %B %d}"
+		"on-click": "firfox https://calendar.google.com",
+		"format": "<b>{:%I:%M %p</b> | %a., %B %d}"
 	},
 	"pulseaudio": {
 		"on-click": "/usr/bin/pavucontrol",
