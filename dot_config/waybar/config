@@ -1,0 +1,20 @@
+[{
+	"output": "BOE 0x0BCA",
+	"include": ["~/.config/waybar/default_modules"],
+	"modules-left": ["sway/workspaces"],
+}, {
+	"output": "LG Electronics 27GL850 009NTWGMC041",
+	"include": ["~/.config/waybar/default_modules"],
+	"modules-left": ["sway/workspaces", "mpd"],
+	
+	"mpd": {
+		"server": "steve",
+		"on-click": "~/.config/sway/music-workspace.sh",
+		"format": "{stateIcon} {artist} - {title} | {album} ({date})",
+		"format-stopped": "󰓛 stopped",
+		"state-icons": {
+			"paused": "󰏤",
+ 			"playing": "󰐊"
+		}
+	}
+}]

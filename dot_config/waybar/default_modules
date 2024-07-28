@@ -1,0 +1,64 @@
+{
+	"layer": "top",
+	"position": "top",
+	"margin-top": 4,
+	"margin-left": 4,
+	"margin-right": 4,
+	"spacing": 4,
+	"modules-center": ["clock"],
+	"modules-right": ["pulseaudio", "network", "cpu", "memory", "backlight", "battery", "tray"],
+
+	"sway/workspaces": {
+		"format": "{name}",
+		"disable-scroll": true,
+		"numeric-first": false,
+	},
+	"clock": {
+		"on-click": "firfox https://calendar.google.com",
+		"format": "<b>{:%I:%M %p</b> | %a., %B %d}"
+	},
+	"pulseaudio": {
+		"on-click": "/usr/bin/pavucontrol",
+		"format": "{icon} {volume}% | {format_source}",
+		"format-bluetooth": "󰂯 {volume}% | {format_source}",
+		"format-bluetooth-muted": "󰂯󰝟 | {format_source}",
+		"format-muted": "󰝟 | {format_source}",
+		"format-source": "󰍬",
+		"format-source-muted": "󰍭",
+		"format-icons": {
+			"headphone": "󰋋",
+			"headset": "󰋎",
+			"default": ["󰕿", "󰖀", "󰕾"]
+		}
+	},
+	"network": {
+		"on-click": "foot nmtui",
+		"format-wifi": "{icon} {essid}",
+		"format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+		"format-ethernet": "󰈀 {ipaddr}",
+		"format-disconnected": "󰤭 disconnected",
+		"format-disabled": "󰀝",
+		"tooltip-format-wifi": "{ipaddr} ({signalStrength}%)"
+	},
+	"cpu": {
+		"on-click": "foot btm",
+		"format": "󰘚 {usage}%",
+		"tooltip": false
+	},
+	"memory": {
+		"on-click": "foot btm",
+		"format": "󰍛 {percentage}%",
+	},
+	"backlight": {
+		"format": "󰃞 {percent}%"
+	},
+	"battery": {
+		"format": "{icon} {capacity}% ({time})",
+		"format-charging": "󰂄 {capacity}% ({time})",
+		"format-plugged": "󰚥 {capacity}%",
+		"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+	},
+	"tray": {
+		"spacing": 10
+	}
+}

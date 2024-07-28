@@ -1,0 +1,60 @@
+* {
+	font-family: FontAwesome, monospace;
+	font-size: 13px;
+	border: none;
+	border-radius: 0;
+	min-height: 0;
+}
+
+window#waybar {
+	background: transparent;
+}
+
+#workspaces {
+}
+
+#workspaces button {
+	margin-right: 2px;
+	padding: 0 5px;
+	color: #ffffff;
+	background: rgba(36, 33, 32, 0.4);
+}
+
+#workspaces button:last-child {
+	margin-right: 0;
+}
+
+#workspaces button.focused {
+	background: rgba(28, 54, 21, 0.725);
+}
+
+#workspaces button:hover {
+	box-shadow: inherit;
+	text-shadow: inherit;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+    padding: 3px 8px;
+    color: #ffffff;
+	background: rgba(28, 54, 21, 0.725);
+} 
+
+#clock {
+	margin-left: 5px;
+	margin-right: 5px;
+}

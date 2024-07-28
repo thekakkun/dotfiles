@@ -1,0 +1,4 @@
+export AWS_ACCESS_KEY_ID="001f71edfa036ec0000000006"
+export AWS_SECRET_ACCESS_KEY="K001uc9rAJdwfoR1AYDogIMyVl5uOZ8"
+export RESTIC_REPOSITORY="s3:s3.us-west-001.backblazeb2.com/killbot2000"
+export RESTIC_PASSWORD="tzhBx#4*2Y2cTUm&x2PnkdWdP#g%n#8U"

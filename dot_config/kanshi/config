@@ -1,0 +1,13 @@
+profile {
+	output eDP-1 scale 1.5
+}
+
+profile {
+	output eDP-1 scale 1.75
+	output "LG Electronics 27GL850 009NTWGMC041" position 1289,0 
+
+	exec swaymsg focus output "LG Electronics 27GL850 009NTWGMC041" 
+	exec swaymsg workspace music output eDP-1
+	exec xrandr --output "LG Electronics 27GL850 009NTWGMC041" --primary
+}
+

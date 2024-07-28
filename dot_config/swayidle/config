@@ -1,0 +1,7 @@
+timeout 60 'pgrep -xu "$USER" swaylock > /dev/null && swaymsg "output * power off"' resume 'pgrep -xu "$USER" swaylock > /dev/null && swaymsg "output * power on"'
+timeout 150 'brightnessctl --quiet --save && brightnessctl --quiet set 0' resume 'brightnessctl --quiet --restore'
+timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
+before-sleep 'swaylock --daemonize --image=~/pictures/wallpaper_blurred.jpg'
+lock 'swaylock --daemonize --image=~/pictures/wallpaper_blurred.jpg'
+unlock 'pkill -xu "$USER" -SIGUSR1 swaylock'
+
