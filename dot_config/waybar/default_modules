@@ -14,8 +14,8 @@
 		"numeric-first": false,
 	},
 	"clock": {
-		"on-click": "firfox https://calendar.google.com",
-		"format": "<b>{:%I:%M %p</b> | %a., %B %d}"
+		"on-click": "exec firefox https://calendar.google.com",
+		"format": "<b>{:%I:%M %p</b> | %a. %b. %d}"
 	},
 	"pulseaudio": {
 		"on-click": "/usr/bin/pavucontrol",
