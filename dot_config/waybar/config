@@ -8,7 +8,7 @@
 	"modules-left": ["sway/workspaces", "mpd"],
 	
 	"mpd": {
-		"server": "steve",
+		"server": "localhost",
 		"on-click": "~/.config/sway/music-workspace.sh",
 		"format": "{stateIcon} {artist} - {title} | {album} ({date})",
 		"format-stopped": "󰓛 stopped",
