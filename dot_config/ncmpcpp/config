@@ -23,7 +23,7 @@
 #
 ##### connection settings #####
 #
-mpd_host = localhost
+mpd_host = dtv743Qr5fckWEDxNFLdpbaEPUH9cQV3@five-pebbles.com 
 #
 mpd_port = 6600
 #
@@ -231,7 +231,7 @@ mpd_music_dir = ~/Music
 #
 #song_list_format = {%a - }{%t}|{$8%f$9}$R{$3%l$9}
 #
-song_status_format = {%a - %t} | %b [%y]
+song_status_format = {%a - %t} | %b (%y)
 #
 #song_library_format = {%n - }{%t}|{%f}
 #
@@ -247,7 +247,7 @@ song_status_format = {%a - %t} | %b [%y]
 #
 #current_item_inactive_column_suffix = $/r$(end)
 #
-now_playing_prefix = $2⏵$9 $4$b
+now_playing_prefix = $2⏵$9$4$b
 #
 now_playing_suffix = $/b$9
 #
@@ -309,7 +309,7 @@ now_playing_suffix = $/b$9
 ##   available.
 ##
 #
-song_columns_list_format = (6f)[]{NE} (30)[]{a} (35)[]{t|f:Title} (6f)[]{lr} (15)[]{b} (11f)[]{y}
+song_columns_list_format = (6f)[]{nr} (35)[]{t|f:Title} (30)[]{a} (6f)[]{lr} (15)[]{b} (11f)[]{y}
 #
 ##### various settings #####
 #
@@ -568,7 +568,7 @@ header_window_color = yellow
 #
 #volume_color = default
 #
-#state_line_color = default
+state_line_color = cyan
 #
 #state_flags_color = default:b
 #
